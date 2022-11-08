@@ -30,6 +30,8 @@ class todoservice{
 
     delete_todo(id){
         // Your code here
+        this.todo_data.todo.splice(id,1)
+        return this.todos;
     }
 
     update_todo(id, todo){
@@ -44,5 +46,8 @@ t.add_todo({
     "done": false
 });
 console.log(t.todo_data.todo)
+
+t.delete_todo(3);
+console.log(t.todo_data.todo);
 
 module.exports= todoservice;
