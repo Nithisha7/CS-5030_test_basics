@@ -36,6 +36,8 @@ class todoservice{
 
     update_todo(id, todo){
         // Your code here
+        this.todos.todo[id]=todo
+        return this.todos
     }
 }
 
@@ -48,6 +50,10 @@ t.add_todo({
 console.log(t.todo_data.todo)
 
 t.delete_todo(3);
+console.log(t.todo_data.todo);
+
+t.update_todo(1,{ title: 'T2', description: 'D2', done: false } );
+t.update_todo(2,{ title: 'T3', description: 'D3', done: false } );
 console.log(t.todo_data.todo);
 
 module.exports= todoservice;
