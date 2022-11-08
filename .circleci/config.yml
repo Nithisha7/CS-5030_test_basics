@@ -44,6 +44,10 @@ jobs:
 workflows:
   sample:
     jobs:
-      - build-and-test-python
+      - build-and-test-python:
+          filters:
+            branches:
+              only:
+                - master
       - build-and-test-javascript
       - build-and-test-todolist
