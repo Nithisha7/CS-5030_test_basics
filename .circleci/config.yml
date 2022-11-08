@@ -18,7 +18,7 @@ jobs:
   build-and-test-javascript:
      
      docker:
-       - image: cimg/node:14.20.0
+       - image: cimg/node:16.18.0
      steps:
        - checkout
        - run:
@@ -31,7 +31,7 @@ jobs:
   build-and-test-todolist:
      
      docker:
-       - image: cimg/node:14.20.0
+       - image: cimg/node:16.18.0
      steps:
        - checkout
        - run:
